@@ -1,0 +1,240 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color:#888888; */
+    background-image: url(gradient-blue-pink-abstract-art-wallpaper-preview.jpg);
+    background-size: cover;
+}
+
+.todo-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    /* background-color: #ededda;/ */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    
+    background-color: transparent;
+    border:2px solid black;
+}
+
+.todo-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* .todo-container{ */
+    /* background-color: cadetblue; */
+/* } */
+
+h1 {
+    text-align: center;
+    color: #333333;
+    /* color: white; */
+    margin-bottom: 20px;
+}
+
+
+.add-task {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-task input[type="text"],
+.add-task input[type="date"],
+.add-task select,
+.add-task button {
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 14px;
+    flex: 1;
+    transition: border-color 0.3s ease;
+}
+
+.add-task input[type="text"]:focus,
+.add-task input[type="date"]:focus,
+.add-task select:focus,
+.add-task button:focus {
+    border-color: #007bff;
+}
+
+.add-task select {
+    width: 100px;
+    background-color: #f5f5f5;
+    color: #333333;
+}
+
+.add-task button {
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.add-task button:hover {
+    background-color: #0056b3;
+}
+
+.input-field {
+    position: relative;
+}
+
+.input-field input[type="text"],
+.input-field input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f5f5f5;
+    color: #333333;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.input-field input[type="text"]:focus,
+.input-field input[type="date"]:focus {
+    border-color: #007bff;
+    background-color: #e0e0e0;
+    outline: none;
+}
+
+.input-field label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #888888;
+    transition: transform 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+
+.input-field input[type="text"]:focus + label,
+.input-field input[type="date"]:focus + label,
+.input-field input[type="text"]:not(:placeholder-shown) + label,
+.input-field input[type="date"]:not(:placeholder-shown) + label {
+    top: 0;
+    transform: translateY(0) scale(0.8);
+    font-size: 12px;
+    color: #007bff;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: rgb(38, 32, 92);
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.button {
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: #ffffff;
+    border-color: #dc3545;
+}
+
+.edit-button {
+    background-color: #ffc107;
+    color: #333333;
+    border-color: #ffc107;
+}
+
+.complete-button {
+    background-color: #28a745;
+    color: #ffffff;
+    border-color: #28a745;
+}
+
+.button:hover {
+    filter: brightness(110%);
+    border-color: #333333;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.filter label {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.filter select {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f5f5f5;
+    color: #333333;
+    border: 1px solid #dddddd;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.filter select:focus {
+    border-color: #007bff;
+    background-color: #e0e0e0;
+    outline: none;
+}
+
+#radio {
+    margin-left: 70%;
+}
+
+#heading {
+    display: inline-block;
+    color: #333333;
+}
+#task{
+    margin-right: 10px;
+}
+#due-date{
+    margin-right: 10px;
+}
+#category{
+    margin-right: 10px;
+}
+/* .todo-container{
+    margin-top: 10px;
+} */
+#heading{
+    color: white;
+}
+#filter{
+    color: white;
+}

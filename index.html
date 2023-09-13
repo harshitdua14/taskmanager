@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="project.css">
+    <title>To-do List App</title>
+</head>
+<body>
+    <div class="todo-container">
+        <div>
+            <h1 id="heading">To-do List</h1>
+            <!-- <input type="checkbox" id="radio"> -->
+        </div>
+        
+
+        <div class="add-task">
+            <input type="text" id="task" placeholder="Add a new task">
+            <input type="date" id="due-date">
+            <select id="category">
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="gaming">gaming</option>
+            </select>
+            <button id="add-button">Add</button>
+            <button id="update-button" style="display: none;">Update</button>
+        </div>
+        <div class="filter">
+            <label for="category-filter" id="filter">Filter by Category:</label>
+            <select id="category-filter">
+                <option value="all">All</option>
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="gaming">Gaming</option>
+            </select>
+        </div>
+        <input type="text" id="search" placeholder="Search tasks" autocomplete="off">
+        <ul id="task-list"></ul>
+    </div>
+    <script src="to-do.js"></script>
+</body>
+</html>
